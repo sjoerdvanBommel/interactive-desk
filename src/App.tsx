@@ -14,12 +14,13 @@ function ThreeScene() {
 function App() {
   return (
     <div className="App h-screen bg-gradient-to-br from-[#150f0b] to-[#010311]">
-      <Canvas>
+      <Canvas camera={{ position: [0, 7, 8] }}>
         <ambientLight />
         <pointLight position={[5, -2, 3]} />
         <pointLight position={[-3, 4, -1]} />
         <OrbitControls />
 
+        <axesHelper />
         <ThreeScene />
       </Canvas>
     </div>
